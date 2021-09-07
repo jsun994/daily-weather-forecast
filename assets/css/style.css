@@ -39,6 +39,10 @@ main {
   justify-content: space-between;
 }
 
+.cols .card {
+  background-color: turquoise;
+}
+
 @media (max-width: 768px) {
   .cols {
     flex-direction: column;
