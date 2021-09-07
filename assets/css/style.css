@@ -29,12 +29,6 @@ main {
   background-color: turquoise;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
 .form-control {
   margin-top: 5px;
   margin-bottom: 10px;
