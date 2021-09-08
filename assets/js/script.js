@@ -18,6 +18,7 @@ var inputHandler = function(event) {
 
     if (cityValue) {
         apiCity(cityValue);
+        inputEl.value = "";
     } else {
         alert("Please enter a city!");
     }
@@ -65,6 +66,7 @@ var apiCurrent = function(lat, lon) {
                 todayWind.innerHTML = data.current.wind_speed + " ";
                 todayHum.innerHTML = data.current.humidity;
                 todayUV.innerHTML = data.current.uvi;
+                forecast(data);
 
             });
         } else {
@@ -72,5 +74,9 @@ var apiCurrent = function(lat, lon) {
         }
     });
 };
+
+var forecast = function(data) {
+    console.log(data);
+}
 
 userFormEl.addEventListener("submit", inputHandler);
