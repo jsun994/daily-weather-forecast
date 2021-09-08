@@ -21,6 +21,15 @@ main {
   flex-wrap: wrap;
 }
 
+.today-title {
+  display: flex;
+  justify-content: center;
+}
+
+.today-title .city-name {
+  padding-top: 13px;
+}
+
 .card {
   margin-bottom: 10px;
 }
