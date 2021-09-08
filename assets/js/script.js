@@ -33,13 +33,15 @@ var apiCity = function(city) {
         //console.log(response);
         if (response.ok) {
             response.json().then(function(data) {
-                console.log(data);
+                //console.log(data);
                 var latitude = data.coord["lat"];
                 var longitude = data.coord["lon"];
                 
-                cityEl.innerHTML = data.name + " (" + moment().format("M-D-YYYY") + ")";
+                cityEl.innerHTML = data.name +
+                " (" + moment().format("M/D/YYYY") + ")";
                 var icon = data.weather[0].icon;
-                todayIcon.setAttribute("src", "http://openweathermap.org/img/wn/" + icon + ".png");
+                todayIcon.setAttribute("src",
+                "http://openweathermap.org/img/wn/" + icon + ".png");
                 
                 apiCurrent(latitude, longitude);
             });
@@ -61,7 +63,7 @@ var apiCurrent = function(lat, lon) {
         if (response.ok) {
             response.json().then(function(data) {
                 
-                console.log(data);
+                //console.log(data);
                 todayTemp.innerHTML = data.current.temp;
                 todayWind.innerHTML = data.current.wind_speed + " ";
                 todayHum.innerHTML = data.current.humidity;
@@ -76,7 +78,28 @@ var apiCurrent = function(lat, lon) {
 };
 
 var forecast = function(data) {
+
     console.log(data);
-}
+
+    for (var i = 1; i < 6; i++) {
+
+        var forecastDate = document.querySelector("#date" + i);
+        forecastDate.innerHTML = moment().add(i, "days").format("M/D/YYYY");
+        
+        var forecastIcons = document.querySelector("#icon" + i);
+        var fIcon = data.daily[i].weather[0].icon;
+        forecastIcons.setAttribute("src",
+        "http://openweathermap.org/img/wn/" + fIcon + ".png");
+
+        var forecastTemp = document.querySelector("#temp" + i);
+        forecastTemp.innerHTML = data.daily[i].temp.day;
+        
+        var forecastWind = document.querySelector("#wind" + i);
+        forecastWind.innerHTML = data.daily[i].wind_speed + " ";
+
+        var forecastHum = document.querySelector("#hum" + i);
+        forecastHum.innerHTML = data.daily[i].humidity;
+    }
+};
 
 userFormEl.addEventListener("submit", inputHandler);

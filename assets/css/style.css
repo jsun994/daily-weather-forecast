@@ -22,6 +22,11 @@ main {
   flex-wrap: wrap;
 }
 
+#days {
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .today-title {
   display: flex;
   justify-content: center;
