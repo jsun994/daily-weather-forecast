@@ -74,7 +74,7 @@ h3 {
 }
 
 .yellow {
-  color: white;
+  color: black;
   background-color: yellow;
 }
 
@@ -91,6 +91,13 @@ h3 {
 .purple {
   color: white;
   background-color: purple;
+}
+
+.btn-styles {
+  width: 100%;
+  border-radius: 5px;
+  background-color: turquoise;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
