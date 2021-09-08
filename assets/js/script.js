@@ -1,6 +1,8 @@
 var userFormEl = document.querySelector("#user-form");
 var inputEl = document.querySelector("#input");
+var infoEl = document.querySelector("#weatherInfo");
 var cityEl = document.querySelector("#city-name");
+var clearAll = document.querySelector("#clear");
 
 var todayIcon = document.querySelector("#today-icon");
 var todayTemp = document.querySelector("#today-temp");
@@ -19,6 +21,7 @@ var inputHandler = function(event) {
     if (cityValue) {
         apiCity(cityValue);
         inputEl.value = "";
+        
     } else {
         alert("Please enter a city!");
     }
@@ -26,6 +29,7 @@ var inputHandler = function(event) {
 
 //city api call
 var apiCity = function(city) {
+    
     var weatherApi = "https://api.openweathermap.org/data/2.5/weather?q="
     + city + "&units=imperial&APPID=" + key;
 
@@ -33,7 +37,8 @@ var apiCity = function(city) {
         
         if (response.ok) {
             response.json().then(function(data) {
-  
+                infoEl.style.display = "";
+
                 var latitude = data.coord["lat"];
                 var longitude = data.coord["lon"];
                 
@@ -56,7 +61,7 @@ var apiCity = function(city) {
             });
         } else {
             alert("Error: " + response.statusText);
-            location.reload();
+            //location.reload();
         }
     });
 };
@@ -104,7 +109,7 @@ var apiCurrent = function(lat, lon) {
             });
         } else {
             alert("Error: " + response.statusText);
-            location.reload();
+            //location.reload();
         }
     });
 };
@@ -180,5 +185,10 @@ var searchRecent = function(event) {
     apiCity(clicked);
 };
 
+var clear = function(event) {
+    localStorage.clear();
+    location.reload();
+}
 load();
 userFormEl.addEventListener("submit", inputHandler);
+clearAll.addEventListener("click", clear);
