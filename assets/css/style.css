@@ -49,6 +49,10 @@ h3 {
   background-color: turquoise;
 }
 
+.card h5 {
+  background-color: turquoise;
+}
+
 .form-control {
   margin-top: 5px;
   margin-bottom: 10px;
@@ -116,6 +120,10 @@ h3 {
   }
 
   h4 {
+    font-size: 15px;
+  }
+
+  h5 {
     font-size: 15px;
   }
 

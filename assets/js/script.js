@@ -30,7 +30,7 @@ var apiCity = function(city) {
     + city + "&units=imperial&APPID=" + key;
 
     fetch(weatherApi).then(function(response) {
-        //console.log(response);
+        
         if (response.ok) {
             response.json().then(function(data) {
   
@@ -73,15 +73,14 @@ var apiCurrent = function(lat, lon) {
         if (response.ok) {
             response.json().then(function(data) {
                 
-                //console.log(data);
                 todayTemp.innerHTML = data.current.temp;
                 todayWind.innerHTML = data.current.wind_speed + " ";
                 todayHum.innerHTML = data.current.humidity;
                 
                 var currentUVI = data.current.uvi;
-                //console.log(currentUVI);
                 todayUV.innerHTML = currentUVI;
                 
+                //switch for uvi color
                 switch (true) {
                     case (currentUVI <= 2):
                         todayUV.className = "badge green";
@@ -101,9 +100,7 @@ var apiCurrent = function(lat, lon) {
                     default:
                         break;
                 }
-
                 forecast(data);
-
             });
         } else {
             alert("Error: " + response.statusText);
@@ -115,8 +112,7 @@ var apiCurrent = function(lat, lon) {
 //5 day forecast
 var forecast = function(data) {
 
-    console.log(data);
-
+    //loop for five day forecast
     for (var i = 1; i < 6; i++) {
 
         var forecastDate = document.querySelector("#date" + i);
@@ -147,26 +143,31 @@ var save = function(city) {
             storage.splice(i, 1);
         }
     }
+    //push and set to local storage
     storage.push(city);
     localStorage.setItem("cities", JSON.stringify(storage));
-    console.log(localStorage);
 }
 
 var load = function() {
-    console.log(localStorage);
+    //console.log(localStorage);
     storage = JSON.parse(localStorage.getItem("cities")) || [];
-
+    
+    //recent searches
     var recent = document.querySelector("#recent");
+    //create list
     var list = document.createElement("p");
     list.className = "cityList";
-    recent.appendChild(list);
+    //append
+    recent.append(list);
 
+    //loop thru storage
     for (var i = 0; i < storage.length; i++) {
         var listItem = document.createElement("button");
         listItem.setAttribute("type", "button");
         listItem.setAttribute("value", storage[i]);
         listItem.innerHTML = storage[i];
         listItem.className = "btn-styles";
+        //prepend
         list.prepend(listItem);
     }
     var listClick = document.querySelector(".cityList");
@@ -174,6 +175,7 @@ var load = function() {
 };
 
 var searchRecent = function(event) {
+    //pass value from clicked city
     var clicked = event.target.getAttribute("value");
     apiCity(clicked);
 };
