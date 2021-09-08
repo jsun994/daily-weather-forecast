@@ -58,6 +58,31 @@ main {
   background-color: turquoise;
 }
 
+.green {
+  color: white;
+  background-color: green;
+}
+
+.yellow {
+  color: white;
+  background-color: yellow;
+}
+
+.orange {
+  color: white;
+  background-color: orange;
+}
+
+.red {
+  color: white;
+  background-color: red;
+}
+
+.purple {
+  color: white;
+  background-color: purple;
+}
+
 @media (max-width: 768px) {
   .cols {
     flex-direction: column;

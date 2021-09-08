@@ -67,7 +67,31 @@ var apiCurrent = function(lat, lon) {
                 todayTemp.innerHTML = data.current.temp;
                 todayWind.innerHTML = data.current.wind_speed + " ";
                 todayHum.innerHTML = data.current.humidity;
-                todayUV.innerHTML = data.current.uvi;
+                
+                var currentUVI = data.current.uvi;
+                //console.log(currentUVI);
+                todayUV.innerHTML = currentUVI;
+                
+                switch (true) {
+                    case (currentUVI <= 2):
+                        todayUV.className = "badge green";
+                        break;
+                    case (currentUVI <= 5):
+                        todayUV.className = "badge yellow";
+                        break;
+                    case (currentUVI <= 7):
+                        todayUV.className = "badge orange";
+                        break;
+                    case (currentUVI <= 10):
+                        todayUV.className = "badge red";
+                        break;
+                    case (currentUVI > 10):
+                        todayUV.className = "badge purple";
+                        break;
+                    default:
+                        break;
+                }
+
                 forecast(data);
 
             });
