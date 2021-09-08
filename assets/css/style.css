@@ -119,8 +119,8 @@ h3 {
   .cols .badge {
     font-size: x-small;
   }
-
-  .today-title .city-name {
-    padding-top: 16px;
+  
+  .today-title {
+    flex-direction: column;
   }
 }
