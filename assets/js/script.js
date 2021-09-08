@@ -14,21 +14,23 @@ var inputHandler = function(event) {
     if (cityValue) {
         //console.log(typeof(cityValue));
         cityEl.innerHTML = cityValue;
-        
+        apiCity(cityValue);
     } else {
         alert("Please enter a city!");
     }
 };
 
-//get coordinates
-var coordinates = function(city) {
-    var weatherApi = "api.openweathermap.org/data/2.5/weather?q="
-    + cityEl + "&appid=" + key;
-
+//get city
+var apiCity = function(city) {
+    var weatherApi = "https://api.openweathermap.org/data/2.5/weather?q="
+    + city + "&APPID=" + key;
+  
+    console.log(weatherApi);
     fetch(weatherApi).then(function(response) {
+        console.log(response);
         if (response.ok) {
             response.json().then(function(data) {
-
+                console.log(data);
             });
         } else {
             alert("Error: " + response.statusText);
