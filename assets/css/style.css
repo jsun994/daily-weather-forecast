@@ -33,7 +33,7 @@ main {
 }
 
 .today-title .city-name {
-  padding-top: 13px;
+  padding-top: 7px;
 }
 
 .card {
@@ -54,7 +54,12 @@ main {
   justify-content: space-between;
 }
 
+.cols .badge {
+  font-size: large;
+}
+
 .cols .card {
+  padding-top: 10px;
   background-color: turquoise;
 }
 
