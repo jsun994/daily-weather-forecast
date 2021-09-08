@@ -13,6 +13,7 @@ var todayUV = document.querySelector("#today-uv");
 var key = "bd049a07fbe50fe7d3fdc4b706ec6bdf";
 var storage = [];
 
+//handle input
 var inputHandler = function(event) {
     event.preventDefault();
 
@@ -151,10 +152,9 @@ var save = function(city) {
     //push and set to local storage
     storage.push(city);
     localStorage.setItem("cities", JSON.stringify(storage));
-}
+};
 
 var load = function() {
-    //console.log(localStorage);
     storage = JSON.parse(localStorage.getItem("cities")) || [];
     
     //recent searches
@@ -179,16 +179,19 @@ var load = function() {
     listClick.addEventListener("click", searchRecent);
 };
 
+//search clicked city
 var searchRecent = function(event) {
     //pass value from clicked city
     var clicked = event.target.getAttribute("value");
     apiCity(clicked);
 };
 
+//clear function
 var clear = function(event) {
     localStorage.clear();
     location.reload();
-}
+};
+
 load();
 userFormEl.addEventListener("submit", inputHandler);
 clearAll.addEventListener("click", clear);
