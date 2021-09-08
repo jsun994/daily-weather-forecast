@@ -1,7 +1,7 @@
 var userFormEl = document.querySelector("#user-form");
 var inputEl = document.querySelector("#input");
 var cityEl = document.querySelector("#city-name");
-var recentEl = document.querySelector("#recent");
+
 var todayIcon = document.querySelector("#today-icon");
 var todayTemp = document.querySelector("#today-temp");
 var todayWind = document.querySelector("#today-wind");
@@ -27,8 +27,6 @@ var inputHandler = function(event) {
 var apiCity = function(city) {
     var weatherApi = "https://api.openweathermap.org/data/2.5/weather?q="
     + city + "&units=imperial&APPID=" + key;
-  
-    //console.log(weatherApi);
 
     fetch(weatherApi).then(function(response) {
         //console.log(response);
@@ -57,8 +55,6 @@ var apiCurrent = function(lat, lon) {
     + lat + "&lon=" + lon +
     "&exclude=minutely,hourly&units=imperial&APPID="
     + key;
-
-    //console.log(oneCall);
 
     fetch(oneCall).then(function(response) {
         if (response.ok) {
