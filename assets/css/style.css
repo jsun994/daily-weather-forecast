@@ -28,10 +28,6 @@ main {
   padding-right: 10px;
 }
 
-#clear {
-  margin-bottom: 15px;
-}
-
 #today-icon {
   align-self: center;
 }
@@ -107,10 +103,16 @@ main {
   background-color: purple;
 }
 
-#recent .badge {
-  width: 100%;
-  padding: 5px;
-  margin-bottom: 5px;
+#recent {
+  padding-bottom: 0;
+}
+
+#recent .btn {
+  margin-bottom: 10px;
+}
+
+#recent .cityList {
+  margin-top: 15px;
 }
 
 @media (max-width: 768px) {
