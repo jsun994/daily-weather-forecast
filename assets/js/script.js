@@ -171,7 +171,7 @@ var load = function() {
         listItem.setAttribute("type", "button");
         listItem.setAttribute("value", storage[i]);
         listItem.innerHTML = storage[i];
-        listItem.className = "btn-styles";
+        listItem.className = "badge badge-info";
         //prepend
         list.prepend(listItem);
     }

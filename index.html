@@ -38,7 +38,7 @@
       <div class="card">
         <h5 class="card-header">Search for a City:</h5>
         <form id="user-form" class="card-body">
-          <input id="input" class="form-control input-lg" name="city-name" type="text" autofocus="true"/>
+          <input id="input" class="form-control" name="city-name" type="text" autofocus="true"/>
           <button class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
@@ -58,12 +58,11 @@
     <div id="weatherInfo" class="col-12 col-md-9" style="display: none">
 
       <div class="card">
-
-        <h5 class="card-header">Current:</h5>
+        <h5 class="card-header">Current Forecast:</h5> 
         <div class="card-body">
           
           <div class="today-title">
-            <p id="city-name" class="city-name"></p>
+            <div id="city-name" class="city-name"></div>
             <img id="today-icon"></img>
           </div>
           
@@ -77,9 +76,7 @@
       </div>
 
       <div class="card">
-
-        <h5 class="card-header">5-Day Forecast:</h5>
-          
+        <h5 class="card-header">5-Day Forecast:</h5>    
         <div class="card-body">
 
           <!--container columns for 5 days-->

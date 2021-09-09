@@ -32,6 +32,10 @@ main {
   margin-bottom: 15px;
 }
 
+#today-icon {
+  align-self: center;
+}
+
 .btn {
   width: 100%;
 }
@@ -42,7 +46,9 @@ main {
 }
 
 .today-title .city-name {
-  padding-top: 13px;
+  font-size: medium;
+  text-align: center;
+  align-self: center;
 }
 
 .card {
@@ -64,12 +70,16 @@ main {
 }
 
 .cols .badge {
-  font-size: large;
+  font-size: small;
 }
 
 .cols .card {
   padding-top: 10px;
   background-color: turquoise;
+}
+
+.cols p {
+  font-size: 12px;
 }
 
 .green {
@@ -97,10 +107,9 @@ main {
   background-color: purple;
 }
 
-.btn-styles {
+#recent .badge {
   width: 100%;
-  border-radius: 5px;
-  background-color: turquoise;
+  padding: 5px;
   margin-bottom: 5px;
 }
 
@@ -119,14 +128,10 @@ main {
     font-size: 15px;
   }
 
-  p {
+  .cols p {
     font-size: 10px;
   }
 
-  .cols .badge {
-    font-size: x-small;
-  }
-  
   .today-title {
     flex-direction: column;
   }
