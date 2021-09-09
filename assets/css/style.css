@@ -45,8 +45,13 @@ main {
 
 .today-title .city-name {
   font-size: medium;
+  color: darkslategray;
   text-align: center;
   align-self: center;
+}
+
+.container {
+  color: darkslategray;
 }
 
 .card {
@@ -69,13 +74,12 @@ main {
 }
 
 .cols .badge {
-  color: aliceblue;
   font-size: 12px;
 }
 
 .cols .card {
   padding-top: 10px;
-  color: darkslategrey;
+  color: darkslategray;
   background-color: skyblue;
 }
 
