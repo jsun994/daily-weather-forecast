@@ -123,18 +123,18 @@ var forecast = function(data) {
         //display five day forecast
         var forecastDate = document.querySelector("#date" + i);
         forecastDate.innerHTML = moment().add(i, "days").format("M/D/YYYY");
-        
+        //icons
         var forecastIcons = document.querySelector("#icon" + i);
         var fIcon = data.daily[i].weather[0].icon;
         forecastIcons.setAttribute("src",
         "http://openweathermap.org/img/wn/" + fIcon + ".png");
-
+        //temps
         var forecastTemp = document.querySelector("#temp" + i);
         forecastTemp.innerHTML = data.daily[i].temp.day;
-        
+        //winds
         var forecastWind = document.querySelector("#wind" + i);
         forecastWind.innerHTML = data.daily[i].wind_speed + " ";
-
+        //humidities
         var forecastHum = document.querySelector("#hum" + i);
         forecastHum.innerHTML = data.daily[i].humidity;
     }
@@ -166,7 +166,7 @@ var load = function() {
     //append
     recent.append(list);
 
-    //loop thru storage
+    //loop thru storage & create btns
     for (var i = 0; i < storage.length; i++) {
         var listItem = document.createElement("button");
         listItem.setAttribute("type", "button");
@@ -182,7 +182,6 @@ var load = function() {
 
 //search clicked city
 var searchRecent = function(event) {
-    //console.log(event);
     //pass value from clicked city
     var clicked = event.target.getAttribute("name");
     apiCity(clicked);
