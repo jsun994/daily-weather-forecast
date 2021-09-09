@@ -8,10 +8,12 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.5;
   font-size: 15px;
+  background-color: aliceblue;
 }
 
 header {
-  background-color: turquoise;
+  color: aliceblue;
+  background-color: royalblue;
   padding: 5px;
   margin-bottom: 15px;
   text-align: center;
@@ -52,7 +54,8 @@ main {
 }
 
 .card h5 {
-  background-color: turquoise;
+  color: aliceblue;
+  background-color: royalblue;
 }
 
 .form-control {
@@ -66,12 +69,14 @@ main {
 }
 
 .cols .badge {
-  font-size: small;
+  color: aliceblue;
+  font-size: 12px;
 }
 
 .cols .card {
   padding-top: 10px;
-  background-color: turquoise;
+  color: darkslategrey;
+  background-color: skyblue;
 }
 
 .cols p {
