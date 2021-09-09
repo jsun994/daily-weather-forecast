@@ -40,9 +40,11 @@ var apiCity = function(city) {
             response.json().then(function(data) {
                 infoEl.style.display = "";
 
+                //store lat and long
                 var latitude = data.coord["lat"];
                 var longitude = data.coord["lon"];
                 
+                //display city name, date and icon
                 cityEl.innerHTML = data.name +
                 " (" + moment().format("M/D/YYYY") + ")";
                 var icon = data.weather[0].icon;
@@ -52,10 +54,9 @@ var apiCity = function(city) {
                 apiCurrent(latitude, longitude);
 
                 //if city list already exists, remove it
-                if (document.querySelector(".cityList")) {
-                    document.querySelector(".cityList").remove();
+                if (document.querySelector("#cityList")) {
+                    document.querySelector("#cityList").remove();
                 }
-                
                 //save and load
                 save(city);
                 load();
@@ -77,10 +78,11 @@ var apiCurrent = function(lat, lon) {
     fetch(oneCall).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
+
+                //display current forecast
                 todayTemp.innerHTML = data.current.temp;
                 todayWind.innerHTML = data.current.wind_speed + " ";
                 todayHum.innerHTML = data.current.humidity;
-                
                 var currentUVI = data.current.uvi;
                 todayUV.innerHTML = currentUVI;
                 
@@ -118,6 +120,7 @@ var forecast = function(data) {
     //loop for five day forecast
     for (var i = 1; i < 6; i++) {
 
+        //display five day forecast
         var forecastDate = document.querySelector("#date" + i);
         forecastDate.innerHTML = moment().add(i, "days").format("M/D/YYYY");
         
@@ -137,8 +140,8 @@ var forecast = function(data) {
     }
 };
 
+//save function
 var save = function(city) {
-
     //splice to prevent dulpicate saves
     for (var i = 0; i < storage.length; i++) {
         if (city === storage[i]) {
@@ -151,14 +154,15 @@ var save = function(city) {
     localStorage.setItem("cities", JSON.stringify(storage));
 };
 
+//load function
 var load = function() {
     storage = JSON.parse(localStorage.getItem("cities")) || [];
     
     //recent searches
     var recent = document.querySelector("#recent");
-    //create list
-    var list = document.createElement("p");
-    list.className = "cityList";
+    //create div
+    var list = document.createElement("div");
+    list.setAttribute("id", "cityList");
     //append
     recent.append(list);
 
@@ -172,7 +176,7 @@ var load = function() {
         //prepend
         list.prepend(listItem);
     }
-    var listClick = document.querySelector(".cityList");
+    var listClick = document.querySelector("#cityList");
     listClick.addEventListener("click", searchRecent);
 };
 

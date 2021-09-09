@@ -112,11 +112,7 @@ main {
   background-color: purple;
 }
 
-#recent {
-  padding-bottom: 0;
-}
-
-#recent .cityList {
+#cityList {
   margin-top: 15px;
 }
 
