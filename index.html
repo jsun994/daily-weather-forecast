@@ -27,42 +27,47 @@
 <body>
 
   <header>
-    <h1 class="font-weight-bold"><i class="fas fa-sun"></i> Weather Dashboard <i class="fas fa-sun"></i></h1>
+    <h1>Weather Dashboard</h1>
   </header>
 
   <main>
 
+    <!--input and recent searches col-->
     <div class="col-12 col-md-3">
 
       <div class="card">
         <h5 class="card-header">Search for a City:</h5>
         <form id="user-form" class="card-body">
           <input id="input" class="form-control input-lg" name="city-name" type="text" autofocus="true"/>
-          <button class="btn btn-info btn-sm" type="submit"><i class="fas fa-search"></i></button>
+          <button class="btn btn-info" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
 
       <div class="card">
         <h5 class="card-header">Recent Searches:</h5>
-        <button id="clear" class="btn btn-danger">Clear All</button>
-        <div id="recent" class="card-body"></div>
+        <div id="recent" class="card-body">
+          <button id="clear" class="btn btn-danger">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
       </div>
 
     </div>
 
+    <!--current and forecast col-->
     <div id="weatherInfo" class="col-12 col-md-9" style="display: none">
 
       <div class="card">
 
-        <h4 class="card-header">Today:</h4>
+        <h5 class="card-header">Today:</h5>
         <div class="card-body">
           
           <div class="today-title">
-            <h3 id="city-name" class="city-name"></h3>
+            <p id="city-name" class="city-name"></p>
             <img id="today-icon"></img>
           </div>
           
-          <div class="container-today">
+          <div class="container">
             <p>Temp: <span id="today-temp"></span>&deg;F</p>
             <p>Wind: <span id="today-wind"></span>MPH</p>
             <p>Humidity: <span id="today-hum"></span>%</p>
@@ -73,7 +78,7 @@
 
       <div class="card">
 
-        <h4 class="card-header">5-Day Forecast:</h4>
+        <h5 class="card-header">5-Day Forecast:</h5>
           
         <div class="card-body">
 
