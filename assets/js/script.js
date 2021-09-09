@@ -170,7 +170,7 @@ var load = function() {
     for (var i = 0; i < storage.length; i++) {
         var listItem = document.createElement("button");
         listItem.setAttribute("type", "button");
-        listItem.setAttribute("value", storage[i]);
+        listItem.setAttribute("name", storage[i]);
         listItem.innerHTML = storage[i];
         listItem.className = "btn btn-sm";
         //prepend
@@ -182,8 +182,9 @@ var load = function() {
 
 //search clicked city
 var searchRecent = function(event) {
+    //console.log(event);
     //pass value from clicked city
-    var clicked = event.target.getAttribute("value");
+    var clicked = event.target.getAttribute("name");
     apiCity(clicked);
 };
 
