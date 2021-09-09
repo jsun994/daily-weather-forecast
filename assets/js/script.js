@@ -62,7 +62,6 @@ var apiCity = function(city) {
             });
         } else {
             alert("Error: " + response.statusText);
-            //location.reload();
         }
     });
 };
@@ -78,7 +77,6 @@ var apiCurrent = function(lat, lon) {
     fetch(oneCall).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
-                console.log(data);
                 todayTemp.innerHTML = data.current.temp;
                 todayWind.innerHTML = data.current.wind_speed + " ";
                 todayHum.innerHTML = data.current.humidity;
@@ -110,7 +108,6 @@ var apiCurrent = function(lat, lon) {
             });
         } else {
             alert("Error: " + response.statusText);
-            //location.reload();
         }
     });
 };
@@ -171,7 +168,7 @@ var load = function() {
         listItem.setAttribute("type", "button");
         listItem.setAttribute("value", storage[i]);
         listItem.innerHTML = storage[i];
-        listItem.className = "btn btn-info btn-sm";
+        listItem.className = "btn btn-sm";
         //prepend
         list.prepend(listItem);
     }
