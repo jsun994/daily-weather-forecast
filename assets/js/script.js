@@ -78,7 +78,7 @@ var apiCurrent = function(lat, lon) {
     fetch(oneCall).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
-                
+                console.log(data);
                 todayTemp.innerHTML = data.current.temp;
                 todayWind.innerHTML = data.current.wind_speed + " ";
                 todayHum.innerHTML = data.current.humidity;
