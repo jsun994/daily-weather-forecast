@@ -1,17 +1,3 @@
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
-***
-***
-***
-*** To avoid retyping too much info. Do a search and replace for the following:
-*** github_username, repo_name, twitter_handle, email, project_title, project_description
--->
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -24,9 +10,7 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 
 
 <!-- PROJECT LOGO -->
@@ -74,12 +58,10 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -87,10 +69,6 @@
 
 ![ss0](./screenshots/screenshot.png)
 ![ss1](./screenshots/screenshot1.png)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
 
 
 ### Built With
@@ -125,18 +103,18 @@ This is an example of how to list things you need to use the software and how to
    ```
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-The user enters a city in the form input.
-The user is then presented with the current and future weather conditions for that city.
-The city is added to the search history.
-The current forecast shows the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index.
-The UV index has a color that indicates whether the conditions are favorable, moderate, or severe.
-The five day forecast displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity.
-The user can also click on a city in the search history.
-Then user is again presented with the current and furture forecasts for that city.
+* The user enters a city in the form input.
+* The user is then presented with the current and future weather conditions for that city.
+* The city is added to the search history.
+* The current forecast shows the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index.
+* The UV index has a color that indicates whether the conditions are favorable, moderate, or severe.
+* The five day forecast displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity.
+* The user can also click on a city in the search history.
+* Then user is again presented with the current and furture forecasts for that city.
+* The user can clear the search history.
 
 
 <!-- ROADMAP -->
@@ -148,8 +126,6 @@ See the [open issues](https://github.com/jsun994/weather-dashboard/issues) for a
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -163,7 +139,7 @@ Contributions are what make the open source community such an amazing place to l
 
 Jay Sun - jaysun054@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/jsun994/weather-dashboard/)
+Project Link: [https://github.com/jsun994/weather-dashboard/]
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
