@@ -10,7 +10,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 <!-- PROJECT LOGO -->
@@ -37,13 +36,11 @@
 </p>
 
 
-
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -65,12 +62,6 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
-![ss0](./screenshots/screenshot.png)
-![ss1](./screenshots/screenshot1.png)
-
-
 ### Built With
 
 * HTML
@@ -116,12 +107,14 @@ This is an example of how to list things you need to use the software and how to
 * Then user is again presented with the current and furture forecasts for that city.
 * The user can clear the search history.
 
+![ss0](./screenshots/screenshot.png)
+![ss1](./screenshots/screenshot1.png)
+
 
 <!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/jsun994/weather-dashboard/issues) for a list of proposed features (and known issues).
-
 
 
 <!-- CONTRIBUTING -->
@@ -140,19 +133,3 @@ See the [open issues](https://github.com/jsun994/weather-dashboard/issues) for a
 Jay Sun - jaysun054@gmail.com
 
 Project Link: [https://github.com/jsun994/weather-dashboard/]
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
