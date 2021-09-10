@@ -50,7 +50,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
 ![ss0](./screenshots/screenshot0.png)
 
 
