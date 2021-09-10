@@ -64,6 +64,11 @@
 
 
 <!-- ABOUT THE PROJECT -->
+## About The Project
+
+![ss0](./screenshots/screenshot.png)
+
+
 ### Built With
 
 * HTML
@@ -109,7 +114,7 @@ This is an example of how to list things you need to use the software and how to
 * Then user is again presented with the current and furture forecasts for that city.
 * The user can clear the search history.
 
-![ss0](./screenshots/screenshot.png)
+
 ![ss1](./screenshots/screenshot1.png)
 
 
