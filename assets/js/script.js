@@ -78,12 +78,12 @@ var apiCurrent = function(lat, lon) {
     fetch(oneCall).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
-
-                //display current forecast
-                todayTemp.innerHTML = data.current.temp;
-                todayWind.innerHTML = data.current.wind_speed + " ";
-                todayHum.innerHTML = data.current.humidity;
-                var currentUVI = data.current.uvi;
+                console.log(data);
+                //display daily forecast
+                todayTemp.innerHTML = data.daily[0].temp.day;
+                todayWind.innerHTML = data.daily[0].wind_speed + " ";
+                todayHum.innerHTML = data.daily[0].humidity;
+                var currentUVI = data.daily[0].uvi;
                 todayUV.innerHTML = currentUVI;
                 
                 //switch for uvi color
