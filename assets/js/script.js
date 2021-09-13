@@ -39,7 +39,7 @@ var apiCity = function(city) {
         if (response.ok) {
             response.json().then(function(data) {
                 infoEl.style.display = "";
-
+               
                 //store lat and long
                 var latitude = data.coord["lat"];
                 var longitude = data.coord["lon"];
@@ -47,9 +47,6 @@ var apiCity = function(city) {
                 //display city name, date and icon
                 cityEl.innerHTML = data.name +
                 " (" + moment().format("M/D/YYYY") + ")";
-                var icon = data.weather[0].icon;
-                todayIcon.setAttribute("src",
-                "http://openweathermap.org/img/wn/" + icon + ".png");
                 
                 apiCurrent(latitude, longitude);
 
@@ -78,8 +75,12 @@ var apiCurrent = function(lat, lon) {
     fetch(oneCall).then(function(response) {
         if (response.ok) {
             response.json().then(function(data) {
-                console.log(data);
+            
                 //display daily forecast
+                var icon = data.daily[0].weather[0].icon;
+                todayIcon.setAttribute("src",
+                "http://openweathermap.org/img/wn/" + icon + ".png");
+
                 todayTemp.innerHTML = data.daily[0].temp.day;
                 todayWind.innerHTML = data.daily[0].wind_speed + " ";
                 todayHum.innerHTML = data.daily[0].humidity;
