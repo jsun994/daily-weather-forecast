@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://jsun994.github.io/weather-dashboard/">
+  <a href="https://jsun994.github.io/daily-weather-forecast/">
     <img src="./screenshots/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -10,14 +10,14 @@
   <p align="center">
   A weather dashboard application that displays the weather for mulitple cities.
     <br />
-    <a href="https://github.com/jsun994/weather-dashboard"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/jsun994/daily-weather-forecast"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://jsun994.github.io/weather-dashboard/">View Demo</a>
+    <a href="https://jsun994.github.io/daily-weather-forecast/">View Demo</a>
     ·
-    <a href="https://github.com/jsun994/weather-dashboard/issues">Report Bug</a>
+    <a href="https://github.com/jsun994/daily-weather-forecast/issues">Report Bug</a>
     ·
-    <a href="https://github.com/jsun994/weather-dashboard/issues">Request Feature</a>
+    <a href="https://github.com/jsun994/daily-weather-forecast/issues">Request Feature</a>
   </p>
 </p>
 
@@ -105,7 +105,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/jsun994/weather-dashboard/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/jsun994/daily-weather-forecast/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
@@ -123,4 +123,4 @@ See the [open issues](https://github.com/jsun994/weather-dashboard/issues) for a
 
 Jay Sun - jaysun054@gmail.com
 
-Project Link: [https://github.com/jsun994/weather-dashboard/]
+Project Link: [https://github.com/jsun994/daily-weather-forecast]
